@@ -12,4 +12,4 @@ export OMPI_MCA_btl="^openib,ofi"
 
 
 #srun --export=ALL ./test_mpi
-mpirun -np $SLURM_NTASKS ./test_mpi
+mpirun --mca btl tcp  -np $SLURM_NTASKS --mca mtl_base_verbose 100  ./test_mpi

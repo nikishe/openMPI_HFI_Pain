@@ -10,4 +10,4 @@ module load OpenMPI/4.1.4-GCC-12.2.0
 
 export OMPI_MCA_mtl="^ofi"
 
-mpirun --mca btl tcp -np $SLURM_NTASKS ./test_mpi
+mpirun --mca btl tcp -np $SLURM_NTASKS --mca mtl_base_verbose 100  ./test_mpi
