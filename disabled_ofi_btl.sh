@@ -8,10 +8,6 @@
 
 module load OpenMPI/4.1.4-GCC-12.2.0
 
-export OMPI_MCA_btl="^openib"
-export OMPI_MCA_pml="cm"
-export OMPI_MCA_mtl="ofi"
-
 
 #srun --export=ALL ./test_mpi
-mpirun -np $SLURM_NTASKS ./test_mpi
+mpirun --mca btl ^openib -np $SLURM_NTASKS ./test_mpi
