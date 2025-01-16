@@ -9,7 +9,7 @@
 module load OpenMPI/4.1.4-GCC-12.2.0
 
 unset OMPI_MCA_mtl_ofi_provider_include
-export OMPI_MCA_mtl_ofi_provider_include=tcp
+export OMPI_MCA_mtl_ofi_provider_include=ofi_rxm
 
 
 #srun --export=ALL ./test_mpi
