@@ -9,6 +9,8 @@
 module load OpenMPI/4.1.4-GCC-12.2.0
 
 unset OMPI_MCA_mtl_ofi_provider_include
+$OMPI_MCA_mtl_ofi_provider_include=tcp
+
 
 #srun --export=ALL ./test_mpi
 mpirun -np $SLURM_NTASKS ./test_mpi
