@@ -12,9 +12,11 @@ export OMPI_MCA_btl="^openib,ofi"
 
 
 #srun --export=ALL ./test_mpi
-mpirun --mca mtl ofi -np $SLURM_NTASKS --mca mtl_base_verbose 100  /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_latency
+#mpirun --mca mtl ofi -np $SLURM_NTASKS --mca mtl_base_verbose 100  
+srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_latency
 echo "======================================================================="
 echo "======================================================================="
 echo "======================================================================="
 echo "======================================================================="
-mpirun --mca mtl ofi -np $SLURM_NTASKS --mca mtl_base_verbose 100  /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_bw
+#mpirun --mca mtl ofi -np $SLURM_NTASKS --mca mtl_base_verbose 100  
+srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_bw
