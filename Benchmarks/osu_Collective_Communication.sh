@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=2
-#SBATCH --mem=4G
-#SBATCH --time=00:10:00
+#SBATCH --ntasks=4
+#SBATCH --mem=8G
+#SBATCH --time=01:00:00
 
 
 
@@ -19,4 +19,4 @@ srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchma
 echo "==========================================collective/osu_bcast=============================================="
 srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/collective/osu_bcast
 echo "==========================================collective/osu_get_bw============================================="
-srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_bw
+#srun --export=ALL /mnt/parscratch/users/cs1nmu/public/tutorials/OSU-MicroBenchmarks/build.openmpi/libexec/osu-micro-benchmarks/mpi/one-sided/osu_get_bw
